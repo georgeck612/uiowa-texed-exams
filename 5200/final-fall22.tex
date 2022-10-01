@@ -117,12 +117,27 @@
                 $\{f_n\}$ converges to $f$ uniformly on $[a,b]$.
         \end{parts}
     \question[14]
-    % TODO: question 8
         \begin{parts}
-            \part[4]
-            \part[3]
-            \part[4]
-            \part[3]
+           \part[7]
+            For a nonempty subset $E$ of a metric space $(X, \rho)$ and a point $x\in X$, define the distance from $x$ to $E$ by 
+            \[\text{dist}(x,E)\coloneq \inf\{\rho(x,y)\mid y\in E\}\].
+            \begin{subparts}
+                \subpart[4]
+                    Show that $f$ is continuous on $X$.
+                \subpart[3]
+                    Show that $\overline{E}=f^{-1}(\{0\})$.
+            \end{subparts} 
+            \part[7]
+            Now define $f: X \to \mathbb{R}$ by 
+            \[f(x) \coloneq \text{dist}(x,E)\quad (x\in X).\]
+            \begin{subparts}
+               \subpart[4]
+                    Assume that $F$ is closed, and $E$ is compact. Prove that 
+                    \[E\cap F = \varnothing \iff \text{dist}(F, E) > 0.\]
+                \subpart[3]
+                    Prove that the previous statement is not true if $E$ and $F$ are merely closed. That is, find an example of two closed sets $E$ and $F$ for which 
+                    dist$(F, E) = 0$ and $E\cap F = \varnothing$. (Hint: To produce an example in $\mathbb{R}$, by Heine-Borel both sets need to be closed and unbounded, e.g., consider $E\coloneq \mathbb{N}$.)
+            \end{subparts}
         \end{parts}
 \end{questions}
 
