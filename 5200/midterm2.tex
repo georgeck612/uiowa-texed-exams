@@ -1,0 +1,139 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{Real Analysis Midterm II}}
+\makebox[\textwidth]{\textsc{Fall 2021}}
+\makebox[\textwidth]{\textsc{Raúl Curto}}
+\vspace{1em}
+
+\begin{questions}
+    \question[12]
+        Define:
+    \begin{parts}
+        \part[4]
+            The upper Lebegue integral of a bounded measurable function.
+        \part[4]
+            Absolute continutity for a real valued function on a closed, bounded interval $[a,b]$.
+        \part[4]
+            Convergence in measure.
+    \end{parts}
+    \question[6]
+        Assume that $f$ is integrable over $E$, and let
+        \[F\coloneq\{x\in E\mid f(x) \not = 0\}.\]
+        Prove that $F$ can be written as a countable union
+        \[F=\bigcup_{n=1}^\infty F_n,\]
+        where $m(F_n)<\infty$ for every $n \in \mathbb{N}$.
+    \question[20]
+        On $\mathbb{R}$, let $\{f_n\}_{n=1}^\infty$ be a sequence of measurable functions, and let $f$ be 
+        a measurable function. We say that $\{f_n\}$ converges to $f$ in probability if for every measurable subset 
+        of $\mathbb{R}$ of finite measure and for every $\eta > 0$,
+        \[m(\{x\in F\mid |f_n(x)-f(x)|>\eta\})\to 0,\]
+        as $n\to\infty$.
+        \begin{parts}
+            \part[4]
+                Prove that convergence in measure implies convergence in probability.
+            \part[16]
+                Consider now the sequence
+                \[f_n \coloneq \chi_{[n,n+1]}.\]
+            \begin{subparts}
+                \subpart[4]
+                    Prove that $f_n \to 0$ pointwise almost everywhere.
+                \subpart[8]
+                    Prove that $f_n \to 0$ in probability.  (Hint: a set of finite measure is, up to small measure, always contained in a bounded interval.)
+                \subpart[4]
+                    Prove that no subsequence $f_{n_k}$ converges to the function zero in measure.
+            \end{subparts}
+        \end{parts}
+    \question[14]
+        On the closed interval $[0,1]$, define a sequence $\{f_n\}_{n=1}^\infty$ of measurable functions by 
+        \begin{equation*}
+            f_n(x) \coloneq 
+            \begin{cases}
+                1 & x=\frac{i}{k}, \text{ if } 1\leq k\leq n \text{ and } 0\leq i\leq k\\
+                0 & \text{otherwise.}
+            \end{cases}
+        \end{equation*}
+        For instance,
+        \begin{equation*}
+            f_1(x) \coloneq
+            \begin{cases}
+                1 & x=0 \text{ or } 1\\
+                0 & \text{otherwise.}
+            \end{cases}
+        \end{equation*}
+        \begin{equation*}
+            f_2(x) \coloneq
+            \begin{cases}
+                1 & x=0, \frac{1}{2}, 1\\
+                0 & \text{otherwise.}
+            \end{cases}
+        \end{equation*}
+        \begin{equation*}
+            f_1(x) \coloneq
+            \begin{cases}
+                1 & x=0, \frac{1}{3}, \frac{1}{2}, \frac{2}{3}, 1\\
+                0 & \text{otherwise.}
+            \end{cases}
+        \end{equation*}
+        \begin{parts}
+            \part[4]
+                Prove that $\{f_n\}$ is an increasing sequence.
+            \part[6]
+                Prove that $f_n \to \chi_{\mathbb{Q}}$ as $n \to \infty$.
+            \part[4]
+                Use this result to prove that the monotone convergence theorem does not hold for the Riemann integral.
+        \end{parts}
+    \question[28]
+        Determine if each of the following statements is true or false. If true, provide a proof; if false, 
+        provide a counterexample or show in some fashion why the statement is false. In either case, you are free 
+        to cite the textbook, and provide a rationale along the lines of ``...by a proposition in Section a.b of Royden-Fitzpatrick.''
+
+        \begin{parts}
+            \part[10]
+            Let $E$ be a measurable subset of $[0,1]$. Consider the function $f: [0,\pi] \to \mathbb{R}$ given by 
+            \[f(x) \coloneq m(E \cap [0,x]).\]
+            \begin{subparts}
+                \subpart[6]
+                  Is $f$ absolutely continuous on $[0,\pi]$?
+                \subpart[4]
+                  Is $f$ differentiable at $x=2$?
+            \end{subparts}
+            \part[6]
+                True or false? Every bounded measurable function defined on $[0,1]$ is the uniform limit of step functions.
+            \part[6]
+                True or false? On $[0,\infty)$, the sequence $\{\chi_{[n,\infty)}\}_{n=1}^\infty$ converges to the function zero in measure.
+            \part[6]
+                True or false? On $\mathbb{R}$, the sequence $\{\frac{1}{n}\chi_{[n,n+1]}\}_{n=1}^\infty$ converges to the function zero uniformly.
+        \end{parts}
+    \question[6]
+        On $[0,\infty)$, let $f(x) = x$, and for $n\in\mathbb{N}$ consider the sequence of functions
+        \[f_n(x) \coloneq x+\frac{1}{n}.\]
+        Prove that $f_n \to f$ in measure, but $f_n^2 \not\to f^2$ in measure.
+    \question[6]
+        Prove that
+        \[\lim_n \int_0^1 e^{-\sin^2(nx)x^ndx=0.}\]
+    \question[8]
+        Recall that Dirichlet's function $\chi_\mathbb{Q}$ is not Riemann integrable. Consider Thomae's function 
+        \begin{equation*}
+            f(x) \coloneq 
+            \begin{cases}
+                \frac{1}{q} & \text{if } x=\frac{p}{q} \text{ is in lowest terms}\\
+                0 & \text{if } x\not\in\mathbb{Q}.
+            \end{cases}
+        \end{equation*}
+        \begin{parts}
+            \part[6]
+                Prove that $f$ is Riemann integrable. (Hint: first determine the set of points of discontinuity for $f$.)
+            \part[2]
+                Find 
+                \[\int_a^b f,\]
+                where $\int$ denotes the Riemann integral.
+        \end{parts}
+\end{questions}
+
+\end{document}

@@ -1,0 +1,117 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{Real Analysis Midterm I}}
+\makebox[\textwidth]{\textsc{Fall 2021}}
+\makebox[\textwidth]{\textsc{Raúl Curto}}
+\vspace{1em}
+
+\begin{questions}
+    \question[12]
+        First, recall that a function $f: \mathbb{R} \to \mathbb{R}$ is said to be Lipschitz 
+        if there exists a constant $C\geq 0$ such that $|f(x)-f(y)| \leq C|x-y|$ 
+        for all $x,y \in\mathbb{R}$.
+
+        Now let $E$ be a measurable subset of $\mathbb{R}$, and assume that $0\leq m(E) < \infty$. 
+        Consider the function $f:[0, \infty) \to \mathbb{R}$ given by
+        \[f(x) \coloneq m(E\cap [0,x]).\]
+
+        \begin{parts}
+            \part[6]
+                Prove that $f$ is Lipschitz.
+            \part[6]
+                Find the best possible constant $C_0$; that is, calculate
+                \[C_0 \coloneq \inf\{C\mid f \text{ is Lipschitz with constant } C\}.\]
+        \end{parts}
+
+    \question[12]
+        Define the following notions.
+        \begin{parts}
+            \part[4]
+                A Borel set in $\mathbb{R}$.
+            \part[4]
+                The outer measure $m^*$ as a set function from the power set $2^\mathbb{R}$ to the 
+                extended reals. Concretely, what is the formal definition of $m^*(A)$, for $A\subseteq\mathbb{R}$?
+            \part[4]
+                A measurable set. That is, given a set $E\subseteq\mathbb{R}$, write down the formal definition of 
+                ``$E$ is measurable.''
+        \end{parts}
+    \question[12]
+        First, observe that the interval $[0,1]$ can be written as the disjoint union of $\left\{\frac{1}{n}\mid n\in\mathbb{N}\right\}$ 
+        and a set $A\subseteq [0,1]$. Consider now a half-open interval $[0,1)$, which admits a similar 
+        disjoint union decomposition, using the same set $A$.
+        \begin{parts}
+            \part[6]
+                Find a simple description of $B\coloneq[0,1)\setminus A$, along the lines of what works for $[0,1)$.
+            \part[6]
+                Use the description in (a) to establish a one-to-one map from $[0,1]$ onto $[0,1)$; in other words, 
+                prove that $[0,1]$ and $[0,1)$ are equipotent by writing down a function $f: [0,1]\to[0,1)$ which is one-to-one and onto.
+        \end{parts}
+    \question[12]
+        Consider the following collection of sets in $\mathbb{R}$:
+        \[\mathcal{A} \coloneq \{B\subseteq\mathbb{R}\mid B \text{ or } B^C \text{ is countable.}\}\]
+        \begin{parts}
+            \part[6]
+                Prove that $\mathcal{A}$ is a $\sigma$-algebra.
+            \part[6]
+                Prove that for $a,b \in \mathbb{R}$ with $a<b$, the interval $[a,b]$ is not in $\mathcal{A}$. That is, 
+                $\mathcal{A}$ provides an example of a $\sigma$-algebra that does not contain any nondegenerate intervals.
+        \end{parts}
+    \question[24]
+        Consider a nonmeasurable set $A\subseteq [0,1]$. Define functions $f, g : \mathbb{R}\to\mathbb{R}$ by
+        \[f(x) \coloneq \chi_A(x)-\chi_{A^C}(x)\]
+        and
+        \[g(x) \coloneq e^x\chi_A(x)-e^x\chi_{A^C}(x),\]
+        where for a set $B\subseteq\mathbb{R}$, $\chi_B$ denotes the characteristic function of $B$.
+        \begin{parts}
+            \part[6]
+                Prove that $f$ is not measurable.
+            \part[6]
+                Prove that $|f|$ is measurable.
+            \part[6]
+                Prove that for any $c\in\mathbb{R}$, the set $\{x\in\mathbb{R}\mid g(x)=c\}$ is Borel.
+            \part[6]
+                Prove that $g$ is not measurable.
+        \end{parts}
+\newpage
+    \question[16]
+        Determine if each of the following statements is true or false. If true, provide a proof; if false, 
+        provide a counterexample or show in some fashion why the statement is false. In either case, you are free 
+        to cite the textbook, and provide a rationale along the lines of ``...by a proposition in Section a.b of Royden-Fitzpatrick.''
+        \begin{parts}
+            \part[4]
+                True or false? There exists a continuous function $f: [0,1]\to\mathbb{R}$ mapping the Cantor set $\mathcal{C}$ 
+                onto a measurable set of measure 1.
+            \part[4]
+                True or false? The set of discontinuities of an increasing function defined on the interval $[0,1]$ is countable.
+            \part[4]
+                True or false? The proof of Lusin's theorem uses Egoroff's theorem.
+            \part[4]
+                True or false? For a set $A$ of real numbers, let $\chi_A$ denote the characteristic function of $A$. Then, 
+                given two arbitrary sets $A,B \subseteq \mathbb{R}$, we always have
+                \[\chi_{A\cup B} = \chi_A + \chi_B - \chi_A\chi_B.\]
+        \end{parts}
+    \question[12]
+        Consider the set of natural numbers $\mathbb{N}$. On its power set $2^\mathbb{N}$ define the set function
+        \begin{equation*}
+            \mu(A) \coloneq \begin{cases}
+                \sum_{n\in A}2^{-n} & A \text{ is finite}\\
+                \infty & A \text{ is infinite.}
+            \end{cases}
+        \end{equation*}
+        \begin{parts}
+            \part[4]
+                Prove that $\mu$ is monotone.
+            \part[4]
+                Prove that $\mu$ is additive. (By induction, it suffices to prove that $\mu(A\cup B) = \mu(A) + \mu(B)$ for all $A, B \subseteq\mathbb{N}$ with $A\cap B = \varnothing$.)
+            \part[4]
+                Prove that $\mu$ is not countably additive.
+        \end{parts}
+\end{questions}
+    
+\end{document}
