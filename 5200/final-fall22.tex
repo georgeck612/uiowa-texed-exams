@@ -1,0 +1,144 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{Real Analysis Final}}
+\makebox[\textwidth]{\textsc{Fall 2021}}
+\makebox[\textwidth]{\textsc{Raúl Curto}}
+\vspace{1em}
+
+\begin{questions}
+    \question[12]
+        Define:
+        \begin{parts}
+            \part[2]
+                Uniform convergence of a sequence of functions on a set $E\subseteq \mathbb{R}$.
+            \part[3]
+                Variation of a function $f$ on a closed, bounded interval $[a,b]$, with respect to a partition $P$ of $[a,b]$.
+            \part[2]
+                Point of closure of a subset $E$ of a metric space $X$.
+            \part[2]
+                Equicontinuity for a colleciton $\mathcal{F}$ of real-valued functions on a metric space $X$.
+            \part[3]
+                State the Cantor intersection theorem.
+        \end{parts}
+    \question[8]
+        Let $f$ be a continuous function on a closed, bounded, nondegenerate interval $[a,b]$ such that 
+
+        (i) $f$ is of bounded variation on $[a,b]$; and
+
+        (ii) $f$ maps sets of measure zero to sets of measure zero; that is, for $E$ a measurable subset of $[a,b]$, $m(E) = 0 \implies m(f(E)) = 0$.
+
+        Prove that $f$ is absolutely continuous on $[a,b]$.
+    \question[8]
+        Let $f: \mathbb{R} \to \mathbb{R}$ be a Borel function, and define 
+        \[\mu(E) \coloneq m(f^{-1}(E)) \quad (E \subseteq \mathbb{R}, E \text{ Borel}).\]
+        Prove:
+        \begin{parts}
+            \part
+                $\mu(E)\geq 0$ for all $E$ Borel;
+            \part
+                $\mu$ is monotone;
+            \part
+                $\mu$ is countably additive;
+            \part
+                $\mu$ is not translation invariant; e.g., find a counterexample of a Borel function $f$ and a set $E$ such that $\mu(E+1)\not = \mu(E)$, where $E+1 \coloneq \{x+1\mid x\in E\}$.
+        \end{parts}
+    \question[20]
+        Determine if each of the following statements is true or false. If true, provide a proof; if false, 
+        provide a counterexample or show in some fashion why the statement is false. In either case, you are free 
+        to cite the textbook, and provide a rationale along the lines of ``...by a proposition in Section a.b of Royden-Fitzpatrick.''
+        \begin{parts}
+            \part[4]
+                True or false? Let $\mathcal{F}$ be a collection of measurable functions on $\mathbb{R}$, and let 
+                \[g\coloneq \sup_{f\in\mathcal{F}}f.\]
+                Then $g$ is measurable on $\mathbb{R}$.
+            \part[6]
+                True or false? Consider the normed linear space $X$ of Riemann integrable functions on $[0,1]$, with the norm $\|f\|_R\coloneq (R)\int_0^1|f(x)|dx$. Then $X$ is a Banach space. 
+                (Hint: the sequence $\{f_n\}_{n=1}^\infty$ of measurable functions given by 
+                \begin{equation*}
+                    f_n(x)\coloneq
+                    \begin{cases}
+                        1 & x=\frac{i}{k}, \text{ if } 1\leq k\leq n \text{ and } 0\leq i\leq k\\
+                        0 & \text{otherwise.}
+                    \end{cases}
+                \end{equation*}
+                The sequence $\{f_n\}$ is increasing and $f_n \to \chi_\mathbb{Q}$ as $n\to\infty$.)
+            \part[4]
+                True or false? Recall that $\ell^\infty$ is the Banach space of real bounded sequences, equipped with the supremum norm. The space $\ell^\infty$ is separable. 
+                (Hint: $2^\mathbb{N}$ is not countable.)
+            \part[6]
+                True or false? Let $g$ be strictly increasing and absolutely continuous on a closed, bounded, nondegenerate interval $[a,b]$, and let $\mathcal{O}$ be an open subset of $(a,b)$. Then 
+                \[m(g(\mathcal{O})) = \int_\mathcal{O}g'.\]
+        \end{parts}
+    \question[16]
+    % TODO: question 5
+        \begin{parts}
+            \part[6]
+                A Hilbert space $\mathcal{H}$ may be characterized as a Banach space in which the so-called parallelogram law holds; that is, for each pair of vectors $x$ and $y$ in $\mathcal{H}$, we have 
+                \[\|x+y\|^2_\mathcal{H} + \|x-y\|^2_\mathcal{H} = 2 \cdot \|x\|_2^\mathcal{H} + 2\cdot \|y\|_\mathcal{H}^2.\]
+                Using only characteristic functions of measurable subsets of $[0,1]$, prove that $L^1([0,1])$ is not a Hilbert space.
+            \part[10]
+                (Embedding of $\ell^p in L^p[1,\infty)$.) Let $1\leq p<\infty$. For $a = (a_1, a_2, \dots)\in\ell^p$, define $f_a: [1,\infty) \to \mathbb{R}$ by 
+                \[f_a(x)\coloneq \sum_{k=1}^\infty a_k\chi_{[k,k+1)}(x) \quad (x\in [1,\infty).\]
+                \begin{subparts}
+                    \subpart[2]
+                        Prove that $f_a\in L^p[1,\infty)$.
+                    \subpart[2]
+                        Prove that $\|f_a\|_p = \|a\|_p$.
+                    \subpart[3]
+                        Prove that the map $T: \ell^p \to L^p[1,\infty)$ given by $T(a)\coloneq f_a$ is linear and injective, but not surjective.
+                    \subpart[3]
+                        True or false? The range of $T$ is dense in $L^p[1,\infty)$.
+                \end{subparts}
+        \end{parts}
+    \question[6]
+        Let $f$ be a Lipschitz function on $[0,1]$ and let $g$ an absolutely continuous function on $[0,1]$. Prove that $f\circ g$ is absolutely continuous on $[0,1]$.
+    \question[16]
+        On a closed, bounded, nondegenerate interval $[a,b]$, consider a sequence $\{f_n\}$ of increasing, absolutely continuous functions on $[a,b]$. Assume:
+
+        (i) $f_n(a)$ = 0 for all $n\in\mathbb{N}$;
+
+        (ii) $f'_n\leq f'_{n+1}$ a.e. on $[a,b]$, for all $n\in\mathbb{N}$;
+
+        (iii) The sequence $\{f_n(b)\}$ is bounded.
+
+        Prove:
+        \begin{parts}
+            \part[4]
+                There exists $f: [a,b] \to \mathbb{R}$ such that $\{f_n\}\to f$ pointwise on $[a,b]$;
+            \part[6]
+                $f$ is absolutely continuous on $[a,b]$; and
+            \part[6]
+                $\{f_n\}$ converges to $f$ uniformly on $[a,b]$.
+        \end{parts}
+    \question[14]
+        \begin{parts}
+           \part[7]
+            For a nonempty subset $E$ of a metric space $(X, \rho)$ and a point $x\in X$, define the distance from $x$ to $E$ by 
+            \[\text{dist}(x,E)\coloneq \inf\{\rho(x,y)\mid y\in E\}\].
+            \begin{subparts}
+                \subpart[4]
+                    Show that $f$ is continuous on $X$.
+                \subpart[3]
+                    Show that $\overline{E}=f^{-1}(\{0\})$.
+            \end{subparts} 
+            \part[7]
+            Now define $f: X \to \mathbb{R}$ by 
+            \[f(x) \coloneq \text{dist}(x,E)\quad (x\in X).\]
+            \begin{subparts}
+               \subpart[4]
+                    Assume that $F$ is closed, and $E$ is compact. Prove that 
+                    \[E\cap F = \varnothing \iff \text{dist}(F, E) > 0.\]
+                \subpart[3]
+                    Prove that the previous statement is not true if $E$ and $F$ are merely closed. That is, find an example of two closed sets $E$ and $F$ for which 
+                    dist$(F, E) = 0$ and $E\cap F = \varnothing$. (Hint: To produce an example in $\mathbb{R}$, by Heine-Borel both sets need to be closed and unbounded, e.g., consider $E\coloneq \mathbb{N}$.)
+            \end{subparts}
+        \end{parts}
+\end{questions}
+
+\end{document}
