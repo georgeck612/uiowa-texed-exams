@@ -49,12 +49,31 @@
                 $\mu$ is not translation invariant; e.g., find a counterexample of a Borel function $f$ and a set $E$ such that $\mu(E+1)\not = \mu(E)$, where $E+1 \coloneq \{x+1\mid x\in E\}$.
         \end{parts}
     \question[20]
-    % TODO: question 4
+        Determine if each of the following statements is true or false. If true, provide a proof; if false, 
+        provide a counterexample or show in some fashion why the statement is false. In either case, you are free 
+        to cite the textbook, and provide a rationale along the lines of ``...by a proposition in Section a.b of Royden-Fitzpatrick.''
         \begin{parts}
             \part[4]
+                True or false? Let $\mathcal{F}$ be a collection of measurable functions on $\mathbb{R}$, and let 
+                \[g\coloneq \sup_{f\in\mathcal{F}}f.\]
+                Then $g$ is measurable on $\mathbb{R}$.
             \part[6]
+                True or false? Consider the normed linear space $X$ of Riemann integrable functions on $[0,1]$, with the norm $\|f\|_R\coloneq (R)\int_0^1|f(x)|dx$. Then $X$ is a Banach space. 
+                (Hint: the sequence $\{f_n\}_{n=1}^\infty$ of measurable functions given by 
+                \begin{equation*}
+                    f_n(x)\coloneq
+                    \begin{cases}
+                        1 & x=\frac{i}{k}, \text{ if } 1\leq k\leq n \text{ and } 0\leq i\leq k\\
+                        0 & \text{otherwise.}
+                    \end{cases}
+                \end{equation*}
+                The sequence $\{f_n\}$ is increasing and $f_n \to \chi_\mathbb{Q}$ as $n\to\infty$.)
             \part[4]
+                True or false? Recall that $\ell^\infty$ is the Banach space of real bounded sequences, equipped with the supremum norm. The space $\ell^\infty$ is separable. 
+                (Hint: $2^\mathbb{N}$ is not countable.)
             \part[6]
+                True or false? Let $g$ be strictly increasing and absolutely continuous on a closed, bounded, nondegenerate interval $[a,b]$, and let $\mathcal{O}$ be an open subset of $(a,b)$. Then 
+                \[m(g(\mathcal{O})) = \int_\mathcal{O}g'.\]
         \end{parts}
     \question[16]
     % TODO: question 5
