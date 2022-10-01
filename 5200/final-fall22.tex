@@ -34,6 +34,20 @@
         (ii) $f$ maps sets of measure zero to sets of measure zero; that is, for $E$ a measurable subset of $[a,b]$, $m(E) = 0 \implies m(f(E)) = 0$.
 
         Prove that $f$ is absolutely continuous on $[a,b]$.
+    \question[8]
+        Let $f: \mathbb{R} \to \mathbb{R}$ be a Borel function, and define 
+        \[\mu(E) \coloneq m(f^{-1}(E)) \quad (E \subseteq \mathbb{R}, E \text{ Borel}).\]
+        Prove:
+        \begin{parts}
+            \part
+                $\mu(E)\geq 0$ for all $E$ Borel;
+            \part
+                $\mu$ is monotone;
+            \part
+                $\mu$ is countably additive;
+            \part
+                $\mu$ is not translation invariant; e.g., find a counterexample of a Borel function $f$ and a set $E$ such that $\mu(E+1)\not = \mu(E)$, where $E+1 \coloneq \{x+1\mid x\in E\}$.
+        \end{parts}
 \end{questions}
 
 \end{document}
