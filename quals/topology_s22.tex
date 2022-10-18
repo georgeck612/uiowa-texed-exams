@@ -1,0 +1,90 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{mathtools}
+
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{Topology PhD Qualifying Exam}}
+\makebox[\textwidth]{\textsc{August 19, 2022}}
+\makebox[\textwidth]{\textsc{Mohammad Farajzadeh, Keiko Kawamuro}}
+\vspace{1em}
+
+\centering
+\section*{Part A}
+\begin{questions}
+    \question
+        Prove that for every group $G = \langle g_1, \dots, g_k \mid r_1, \dots, r_k\rangle$ there is a 2-dimensional cell complex $X_G$ with $\pi_1(G)\simeq G$.
+    \question
+        \begin{parts}
+            \part
+                Let $\alpha$ be an oriented closed loop in a topological space $X$. Let $x_0\in X$ and $p,q \in \alpha$ be points. (They are possibly the same points.) Let $\gamma$ (resp. $\delta$) be an oriented path in $X$ that starts at $x_0$ and ends at $p$ (resp. $q$).
+
+                Show that homotopy classes $[\gamma\ast\alpha\ast\bar{\gamma}]$ and $[\delta\ast\alpha\ast\bar{\delta}]$ in $\pi_1(X, x_0)$ are conjugate to each other.
+            \part
+                Let $x_0$ and $x_0'$ be points in $X$. Show that $\pi_1(X,x_0)$ and $\pi_1(X,x_0')$ are group isomorphic.
+        \end{parts}
+    \question
+        Let $D$ be the unit disk in $\mathbb{R}^2$. Show that every continuous map $h : D \to D$ has a fixed point.
+    \question
+        Let $i=1, 2$. Let $h_i : D^2 \times S^1 \to A_i$ be a homeomorphism. The boundary of $A_i$ is a torus $\partial A_i = \partial D \times S^1 = S^1 \times S^1$. We define two curves on $\partial A_i$, a meridian $m_i$ and a longitude $l_i$, as follows: Fix points $x\in\partial D^2$ and $y\in S^1$. The meridian is defined by $m_i = h_i(\partial D^2 \times \{y\})$ and the longitude is defined by $l_i = h_i(\{x\}\times S^1)$.
+
+        Let $(p,q)$ be coprime integers. Let $\phi : \partial A_1 \to \partial A_2$ be a homeomorphism that takes the meridian $m_1$ to a simple closed curve whose homotopy type is equal to $p[m_1]+q[l_2]$. Construct a space $X$ gluing the solid tori $A_1$ and $A_2$ along their boundary using the map $\phi$.
+
+        Using the van Kampen theorem, compute the fundamental group of the space $X$.
+    \question
+        Let $X = S^1 \vee S^1$.
+        \begin{parts}
+            \part
+                Find a $3:1$ (non-trivial) normal covering of $X$ and find the corresponding normal subgroup of $\pi_1(X)$.
+            \part
+                Find a $3:1$ non-normal covering of $X$.
+            \part
+                Describe the universal covering of $X$.
+        \end{parts}
+    \question
+        \begin{parts}
+            \part
+                Describe a cell-complex structure on the $n$-dimensional real projective space $\mathbb{R}P^n$ where $n\geq 2$.
+            \part
+                Find a non-trivial covering of $\mathbb{R}P^n$ and compute its deck transformation group.
+        \end{parts}
+\end{questions}
+\newpage
+\centering
+\section*{Part B}
+\begin{questions}
+    \question
+        Let $S$ be the unit sphere in $\mathbb{R}^3$. Find a $C^\infty$ atlas on $S$ that consists of two charts.
+    \question
+        State the regular level set theorem, then show that the unit sphere $S$ is a $2$-dimensional manifold.
+    \question
+        Let $U$ be an open subset of $\mathbb{R}^n$. Show that the exterior derivative $d : \Omega^\ast(U) \to \Omega^\ast(U)$ satisfies the \textit{cocycle condition}; that is, $d^2=0$.
+    \question
+        \begin{parts}
+            \part
+                Show that the map $\phi : \mathbb{R}^3 \to \mathbb{R}^3$ defined by 
+                \[\phi(x,y,z) = (2y, -x, -xy+z)\]
+                is a diffeomorphism.
+            \part
+                Let $X = x\frac{\partial}{\partial x} + y\frac{\partial}{\partial y}$ be a vector field on $\mathbb{R}^3$. Compute $\phi_\ast(X)$ at $p=(x,y,z)$.
+            \part
+                Let $\alpha = dz-ydx$ be a 1-form on $\mathbb{R}^3$. Compute the pullback $\phi^\ast(\alpha)$ at $p=(x,y,z)$.
+        \end{parts}
+    \question
+        Let $\omega$ be a 2-form on the unit sphere $S$ in $\mathbb{R}^3$ defined by:
+        \[\omega = \begin{cases}
+            \frac{dy\wedge dz}{x} & \text{for} x\not = 0,\\
+            \frac{dz\wedge dx}{y} & \text{for} y\not = 0,\\
+            \frac{dx\wedge dy}{z} & \text{for} z\not = 0.
+        \end{cases}\]
+        Show that this $\omega$ is well-defined. (In other words, if $x,y,z \not = 0$ then the three expressions give the same 2-form.) Then compute the integral $\int_S\omega$.
+    \question
+        Let $O(n)$ be the orthogonal group, the group of linear transformations of $\mathbb{R}^n$ that preserve distance. In other words, the group of $n\times n$ matrices such that $AA^T = I$ where $A^T$ is the transpose of $A$ and $I$ is the identity matrix. Show that $O(n)$ is a manifold of dimension $n(n-1)/2$.
+    \end{questions}
+
+\end{document}
