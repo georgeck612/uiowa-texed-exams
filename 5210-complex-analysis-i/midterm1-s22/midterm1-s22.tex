@@ -1,0 +1,109 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{Complex Analysis Midterm I}}
+\makebox[\textwidth]{\textsc{Spring 2022}}
+\makebox[\textwidth]{\textsc{Raúl Curto}}
+\vspace{1em}
+
+\begin{questions}
+    \question[20]
+    % TODO: extra line break here in a latex-cool way (I haven't read the docs for the exam package)
+        \begin{parts}
+            \part[4]
+                Evaluate the cross ratio
+                \[(1+i, 1, 0, \infty).\]
+            \part[5]
+                Let $\gamma$ be the right half of the unit circle from $i$ to $-i$. Calculate
+                \[\int_\gamma z^{-\frac{3}{2}}dz.\]
+            \part[5]
+                If 
+                \[T(z) = \frac{az + b}{cz + d},\]
+                find complex numbers $z_2, z_3, z_4$ in terms of $a, b, c, d$, and such that
+                \[T(z) = (z_1, z_2, z_3, z_4).\] 
+            \part[6]
+                Evaluate the line integral
+                \[\int_\gamma \frac{\log z}{z^n}dz,\]
+                where $\gamma(t) = 1 + \frac{1}{2}e^{it},$ for $0 \leq t \leq 2\pi$ and $n\geq 0$.
+        \end{parts}
+    \question[10]
+        Show that the series
+        \begin{equation}\label{res}
+            \sum_{n=1}^\infty\left(\frac{z+i}{z-i}\right)^n
+        \end{equation}
+        defines an analytic function on the disc of radius 1 centered at $-i$.
+
+        Hint: for $0<s<1$, first prove that
+        \begin{equation}
+            \left|\frac{z+i}{z-i}\right| \leq \frac{2}{2-s}.
+        \end{equation}
+        Next, prove that the series
+        \begin{equation}
+            \sum_{n\geq 1}\left(\frac{s}{2-s}\right)^n
+        \end{equation}
+        converges. With these two results in hand, prove (\refeq{res}).
+    \question[16]
+        \begin{parts}
+            \part[4]
+                State the Cantor intersection theorem.
+            \part[6]
+                Recall the stereographic projection $\Pi: S \to \mathbb{C}_\infty$, and let $\alpha \in \mathbb{R}$ be such that $0<\alpha<1$. In $\mathbb{R}^3$, consider the 
+                vertical plane $P_\alpha$ given by $x_2 = \alpha$, and let $C_\alpha$ denote the intersection of $P_\alpha$ with the unit sphere $S$.
+                \begin{subparts}
+                    \subpart[3]
+                        In terms of $z$ and $\bar{z}$, describe $\Pi(C_\alpha)$.
+                    \subpart[3]
+                        What kind of geometric figure is $\Pi(C_\alpha)$: a straight line, a circle, a parabola, an ellipse with major and minor axes of different length, or none of the above? Justify your answer.
+                \end{subparts}
+            \part[6]
+                Find the domain of analyticity of
+                \[f(z) \coloneq \log\left(\frac{z-1}{z+1}\right),\]
+                where $\log$ denotes the principal branch of the logarithm.
+        \end{parts}
+    \question[14]
+        Determine if each of the following statements is true or false. If true, provide a proof; if false, 
+        provide a counterexample or show in some fashion why the statement is false. In either case, you are free 
+        to cite the textbook, and provide a rationale along the lines of ``...by a proposition in Section a.b of Conway.''
+        \begin{parts}
+            \part[5]
+                True or false? Let $T$ be a Möbius transformation that has $\infty$ as its only fixed point. Then $T$ is a translation, but not the identity map.
+            \part[4]
+                True or false? For $z, w \in \mathbb{C}$ the following identity holds:
+                \[|z+\bar{w}|^2 - |z-\bar{w}|^2 = 4\Re (zw).\]
+            \part[5]
+                True or false? Let $D$ be the open unit disk and let $f: D \to \mathbb{C}$ be an analytic function. 
+                Assume that the set of zeros of $f$ include the sequence
+                \[\left\{\frac{1}{2}e^{in}\mid n\in\mathbb{N}\right\}.\]
+                Then $f$ is identically equal to zero.
+        \end{parts}
+    \question[8]
+        Let $f$ be an entire function such that $f(x) = e^x$ for all $x$ real and positive. Prove that $f(z) = e^z$ for all $z\in\mathbb{C}$.
+    \question[10]
+        Calculate the radius of convergence $R$ for the power series
+        \[\sum_{n=1}^\infty \frac{n!}{n^n}z^n.\]
+        Hint: Stirling's formula may be helpful: for every $n\in\mathbb{N}$, 
+        \[n! = n^ne^{-n}u_n,\]
+        where the sequence $\{u_n\}$ satisfies the condition
+        \[\lim_n u_n^{1/n} = 1.\]
+    \question[10]
+        Let $D = \{z \mid |z| < 1\}$ be the open unit disk. Find all Möbius transformations $T$ such that $T(D)=D$.
+    \question[12]
+        Determine if each of the following statements is true or false. If true, provide a proof; if false, 
+        provide a counterexample or show in some fashion why the statement is false. In either case, you are free 
+        to cite the textbook, and provide a rationale along the lines of ``...by a proposition in Section a.b of Conway.''
+        \begin{parts}
+            \part[4]
+                True or false? Every connected component of a nonempty open set in $\mathbb{C}$ is open and closed.
+            \part[4]
+                True or false? If $F_1$ and $F_2$ are primitives for $f: G\to\mathbb{C}$ and $G$ is open and connected, then there is a constant $c$ such that $F_1(z) = c + F_2(z)$ for each $z$ in $G$.
+            \part[4]
+                True or false? If $z\in\mathbb{C}$ and $\Re(z^n)\leq 0$ for all $n\in\mathbb{N}$, then $z=0$.
+        \end{parts}
+\end{questions}
+
+\end{document}
