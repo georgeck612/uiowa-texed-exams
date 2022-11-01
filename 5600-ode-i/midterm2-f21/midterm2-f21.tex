@@ -1,0 +1,62 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{ODE Midterm II}}
+\makebox[\textwidth]{\textsc{Fall 2021}}
+\makebox[\textwidth]{\textsc{Yangyang Wang}}
+\vspace{1em}
+
+\begin{questions}
+    \question[20]
+        Consider
+        \begin{equation}
+            \begin{aligned}
+              \dot{x} &= x^2 - y^2 \\
+              \dot{y} &= y
+            \end{aligned}
+          \end{equation}
+        \begin{parts}
+            \part
+                Use the power series method to find the quadratic approximation for $U$, the unstable manifold of the equilibrium $(0,0)$.
+            \part
+                Sketch $U$ and a few other solutions of this system in the $xy$-plane. (Hint: $y=0$ is invariant under the flow.)
+            \part
+                Write down the linearization of $(1)$ at $(0,0)$. Find its equilibrium points and draw the phase portrait.
+            \part
+                Compare solutions of the nonlinear system and its linearization. Is there a conjugacy between the two systems in a neighborhood of $(0,0)$? If yes, construct a conjugacy. 
+                If no, explain why this does not violate the Hartman-Grobman theorem.
+        \end{parts}
+    \question[20]
+        Let
+        \[g(x) \coloneq\frac{f(x)}{1+|f(x)|},\]
+        where $f: E\to\mathbb{R}^n$ is locally Lipschitz and $E$ is an open subset in $\mathbb{R}^n$ containing $x_0$. Prove the solution of
+        \begin{equation}
+            x' = g(x), \ x(0) = x_0
+        \end{equation}
+        exists on $(-\infty, \infty)$ by showing the following:
+        \begin{parts}
+            \part
+                For $g(x)$ locally Lipschitz, if there exists $M > 0$ such that $|g(x)|\leq M$ for all $x\in E$, then the solution to $x'=g(x)$, $x(0)=x_0$ exissts on $(-\infty, \infty)$.
+            \part
+                Show $g(x) = \frac{f(x)}{1+|f(x)|}$ is locally Lipschitz.
+            \part
+                Combine (a) and (b) to prove the solution to (2) exists for all $t$ in $(-\infty, \infty)$.
+        \end{parts}
+    \question[10]
+        Consider
+        \begin{equation*}
+            \begin{aligned}
+                \dot{x} &= -x + 2y^3 - 2y^4\\
+                \dot{y} &= -x-y+xy
+            \end{aligned}
+        \end{equation*}
+        Determine the stability (stable but not asymptotically stable, unstable, or asymptotically unstable) of the equilibrium point (0,0) by finding an appropriate Liapunov function. 
+        Hint: Consider $L(x,y) = x^m + y^n$. Determine $m$ and $n$ based on the conditions of the Liapunov theorem.
+\end{questions}
+
+\end{document}
