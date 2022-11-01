@@ -57,6 +57,27 @@
         \end{equation*}
         Determine the stability (stable but not asymptotically stable, unstable, or asymptotically unstable) of the equilibrium point (0,0) by finding an appropriate Liapunov function. 
         Hint: Consider $L(x,y) = x^m + y^n$. Determine $m$ and $n$ based on the conditions of the Liapunov theorem.
+    \question[20]
+        The following system is a Hamiltonian system:
+        \begin{equation*}
+            \begin{aligned}
+                \dot{x} &= y\\
+                \dot{y} &= -x^2 - x
+            \end{aligned}
+        \end{equation*}
+        \begin{parts}
+            \part
+                Find a Hamiltonian function $H(x,y)$ and its critical points.
+            \part
+                Consider
+                \begin{equation*}
+                    \begin{aligned}
+                        \dot{x} &= -\frac{\partial H}{\partial x}\\
+                        \dot{y} &= \frac{\partial H}{\partial y}
+                    \end{aligned}
+                \end{equation*}
+                where $H$ is the function you found in part (a). Use an appropriate Liapunov function to determine the stability of the origin in the above system. (Hint: You can't directly use the properties of the Hamiltonian or gradient systems.)
+        \end{parts}
 \end{questions}
 
 \end{document}
