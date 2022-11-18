@@ -1,0 +1,53 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{ODE Midterm I}}
+\makebox[\textwidth]{\textsc{Fall 2022}}
+\makebox[\textwidth]{\textsc{Yangyang Wang}}
+\vspace{1em}
+
+\begin{questions}
+
+\question[20]
+For the following one-dimensional autonomous sytem
+\[x'=ax+x^3, \quad x\in\mathbb{R}\]
+\begin{parts}
+    \part
+    Find all the equilibrium points as a function of the parameter $a\in\mathbb{R}$.
+    \part
+    Determine their stability.
+    \part
+    Sketch the bifurcation diagram with respect to the parameter $a$ in the $(a,x)$-plane.
+\end{parts}
+
+\question[20]
+Consider the linear system $\dot{X} = AX$ where
+\[A = \begin{bmatrix}
+    -1 & 1 & -2\\
+    -1 & -1 & 4\\
+    0 & 0 & 1
+\end{bmatrix}.\]
+\begin{parts}
+    \part
+    Given that the complex eigenvalues of $A$ are $-1\pm i$ and the eigenvector associated with $-1 + i$ is $[1\quad i\quad 0]^\intercal$, compute the third eigenvalue and the corresponding eigenvector.
+    \part
+    Determine the stable, center, and unstable subspaces $E^s, E^c$, and $E^u$. Sketch the phase portrait on $E^s$.
+    \part
+    Compute $e^{tA}$ (write it as a single matrix).
+\end{parts}
+
+\question[30]
+Consider a linear system $\dot{X} = A(t)X$ where $A(t)$ is a $T$-periodic matrix. Let $\rho$ be a Floquet multiplier and $r$ be the corresponding Floquet exponent (i.e., $\rho = e^{rT}$).
+\begin{parts}
+    \part
+    Show that there exists a solution $Y(t)$ such that $Y(t+T) = \rho Y(t)$.
+    \part
+    $Y(t)$ can be written as $Y(t) = e^{rt}q(t)$. Prove that $q(t)$ is a $T$-periodic function.
+\end{parts}
+
+\end{questions}
+\end{document}
