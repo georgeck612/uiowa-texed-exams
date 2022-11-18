@@ -1,0 +1,43 @@
+\documentclass{exam}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+
+\begin{document}
+\centering
+\makebox[\textwidth]{\textsc{ODE Midterm II}}
+\makebox[\textwidth]{\textsc{Fall 2022}}
+\makebox[\textwidth]{\textsc{Yangyang Wang}}
+\vspace{1em}
+
+\begin{questions}
+
+\question[20]
+Consider
+\begin{align*}
+    \dot{x} &= 2x + xy\\
+    \dot{y} &= -y + x^2
+\end{align*}
+Find the quadratic approximation for $S$ and $U$, the stable and unstable manifolds of the equilibrium (0,0). 
+Draw the phase portrait and sketch $S$, $U$, and the corresponding eigenspaces $(E^s, E^u)$.
+
+\question[20]
+Consider
+\[\dot{x} = x^2 - e^tx + e^t\]
+\begin{parts}
+    \part
+    Show the function $x(t) = e^t$ is a solution to the above differential equation with initial condition $x(0) = 1$.
+    \part
+    Write down the variational equation associated with the above intial value problem and compute its principal fundamental matrix solution $\Phi(t)$.
+\end{parts}
+
+\question[20]
+Consider the system
+\begin{align*}
+    \dot{x} &= -x^3 - x^2y\\
+    \dot{y} &= -y + x^3
+\end{align*}
+Determine the stability of the origin using the Lyapunov function method. What is the basin of attraction?
+
+\end{questions}
+\end{document}
