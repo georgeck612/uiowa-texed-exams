@@ -8,8 +8,6 @@ Fall 2022
 <ul>
     <li>Midterm 1 Part A</li>
     <li>Midterm 1 Part B</li>
-    <li>Midterm 2 Part A</li>
-    <li>Midterm 2 Part B</li>
 </ul>
 
 # 5200: Real Analysis I
