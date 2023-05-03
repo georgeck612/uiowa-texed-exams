@@ -1,5 +1,6 @@
 ## Output files
 ##*.pdf
+*.tex
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
